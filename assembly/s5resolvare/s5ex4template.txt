@@ -1,0 +1,9 @@
+l1:
+push ecx
+mov ecx, lg_s2:
+    12:
+
+
+    loop 12
+pop ecx
+loop l1

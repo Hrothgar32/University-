@@ -1,0 +1,243 @@
+0000000   #   i   n   c   l   u   d   e       <   s   t   d   i   o   .
+0000020   h   >  \r  \n   #   i   n   c   l   u   d   e       <   s   t
+0000040   d   l   i   b   .   h   >  \r  \n   t   y   p   e   d   e   f
+0000060       s   t   r   u   c   t       n   o   d   e   _   t   y   p
+0000100   e  \r  \n   {  \r  \n                   i   n   t       i   d
+0000120   ;       /   *       n   u   m   e   l   e       n   o   d   u
+0000140   l   u   i       *   /  \r  \n                   s   t   r   u
+0000160   c   t       n   o   d   e   _   t   y   p   e       *   l   e
+0000200   f   t   ,       *   r   i   g   h   t   ;  \r  \n   }       N
+0000220   o   d   e   T   ;  \r  \n  \r  \n   v   o   i   d       f   a
+0000240   t   a   l   E   r   r   o   r   (       c   o   n   s   t    
+0000260   c   h   a   r       *   m   s   g       )  \r  \n   {  \r  \n
+0000300                   p   r   i   n   t   f   (       m   s   g    
+0000320   )   ;  \r  \n                   p   r   i   n   t   f   (    
+0000340   "   \   n   "       )   ;  \r  \n                   e   x   i
+0000360   t       (       1       )   ;  \r  \n   }  \r  \n  \r  \n   v
+0000400   o   i   d       p   o   s   t   o   r   d   e   r   (       N
+0000420   o   d   e   T       *   p       )   {  \r  \n                
+0000440   i   f   (   p       !   =       N   U   L   L   )   {  \r  \n
+0000460                                   p   o   s   t   o   r   d   e
+0000500   r   (   p   -   >   l   e   f   t   )   ;  \r  \n            
+0000520                       p   o   s   t   o   r   d   e   r   (   p
+0000540   -   >   r   i   g   h   t   )   ;  \r  \n                    
+0000560               p   r   i   n   t   f   (   "   %   d       \   n
+0000600   "   ,       p   -   >   i   d   )   ;  \r  \n                
+0000620   }  \r  \n  \r  \n   }  \r  \n  \r  \n   N   o   d   e   T   *
+0000640       s   e   a   r   c   h   (   N   o   d   e   T   *       r
+0000660   o   o   t   ,       i   n   t       k   e   y   )   {  \r  \n
+0000700                   i   f   (   r   o   o   t       =   =       N
+0000720   U   L   L   )  \r  \n                                   r   e
+0000740   t   u   r   n       N   U   L   L   ;  \r  \n                
+0000760   i   f   (   r   o   o   t       !   =       N   U   L   L    
+0001000   &   &       r   o   o   t   -   >   i   d       =   =       k
+0001020   e   y   )  \r  \n                                   r   e   t
+0001040   u   r   n       r   o   o   t   ;  \r  \n                   N
+0001060   o   d   e   T   *       l   e   f   t   S   e   a   r   c   h
+0001100       =       s   e   a   r   c   h   (   r   o   o   t   -   >
+0001120   l   e   f   t   ,       k   e   y   )   ;  \r  \n            
+0001140       N   o   d   e   T   *       r   i   g   h   t   S   e   a
+0001160   r   c   h       =       s   e   a   r   c   h   (   r   o   o
+0001200   t   -   >   r   i   g   h   t   ,       k   e   y   )   ;  \r
+0001220  \n                   i   f   (   l   e   f   t   S   e   a   r
+0001240   c   h       !   =       N   U   L   L   )  \r  \n            
+0001260                       r   e   t   u   r   n       l   e   f   t
+0001300   S   e   a   r   c   h   ;  \r  \n                   i   f   (
+0001320   r   i   g   h   t   S   e   a   r   c   h       !   =       N
+0001340   U   L   L   )  \r  \n                                   r   e
+0001360   t   u   r   n       r   i   g   h   t   S   e   a   r   c   h
+0001400   ;  \r  \n                   r   e   t   u   r   n       N   U
+0001420   L   L   ;  \r  \n   }  \r  \n  \r  \n   v   o   i   d       i
+0001440   n   o   r   d   e   r   (       N   o   d   e   T       *   p
+0001460       )   {  \r  \n                   i   f   (   p       !   =
+0001500       N   U   L   L   )   {  \r  \n                            
+0001520       i   n   o   r   d   e   r   (   p   -   >   l   e   f   t
+0001540   )   ;  \r  \n                                   p   r   i   n
+0001560   t   f   (   "   %   d       \   n   "   ,       p   -   >   i
+0001600   d   )   ;  \r  \n                                   i   n   o
+0001620   r   d   e   r   (   p   -   >   r   i   g   h   t   )   ;  \r
+0001640  \n                   }  \r  \n   }  \r  \n  \r  \n   i   n   t
+0001660       l   e   a   f   _   n   o   d   e   (   N   o   d   e   T
+0001700       *   n   o   d   e   )   {  \r  \n                   i   f
+0001720       (   n   o   d   e       =   =       N   U   L   L   )  \r
+0001740  \n                                   r   e   t   u   r   n    
+0001760   0   ;  \r  \n                   i   f   (   n   o   d   e   -
+0002000   >   l   e   f   t       =   =       N   U   L   L       &   &
+0002020       n   o   d   e   -   >   r   i   g   h   t       =   =    
+0002040   N   U   L   L   )  \r  \n                                   r
+0002060   e   t   u   r   n       1   ;  \r  \n                   r   e
+0002100   t   u   r   n       l   e   a   f   _   n   o   d   e   (   n
+0002120   o   d   e   -   >   l   e   f   t   )       +       l   e   a
+0002140   f   _   n   o   d   e   (   n   o   d   e   -   >   r   i   g
+0002160   h   t   )   ;  \r  \n   }  \r  \n  \r  \n   i   n   t       n
+0002200   o   d   u   r   i   _   i   n   t   e   r   n   e   (   N   o
+0002220   d   e   T       *   n   o   d   e   )   {  \r  \n            
+0002240       i   f   (   n   o   d   e       =   =       N   U   L   L
+0002260       |   |       (   n   o   d   e   -   >   l   e   f   t    
+0002300   =   =       N   U   L   L       &   &       n   o   d   e   -
+0002320   >   r   i   g   h   t       =   =       N   U   L   L   )   )
+0002340  \r  \n                                   r   e   t   u   r   n
+0002360       0   ;  \r  \n                   r   e   t   u   r   n    
+0002400   1       +       n   o   d   u   r   i   _   i   n   t   e   r
+0002420   n   e   (   n   o   d   e   -   >   l   e   f   t   )       +
+0002440       n   o   d   u   r   i   _   i   n   t   e   r   n   e   (
+0002460   n   o   d   e   -   >   r   i   g   h   t   )   ;  \r  \n   }
+0002500  \r  \n  \r  \n   i   n   t       m   a   x   i   m   (   i   n
+0002520   t       a   ,       i   n   t       b   )   {  \r  \n        
+0002540           i   f   (   a       >       b   )  \r  \n            
+0002560                       r   e   t   u   r   n       a   ;  \r  \n
+0002600                   r   e   t   u   r   n       b   ;  \r  \n   }
+0002620  \r  \n  \r  \n   i   n   t       i   n   a   l   t   i   m   e
+0002640   (   N   o   d   e   T       *   n   o   d   e   )   {  \r  \n
+0002660                   i   f   (   n   o   d   e       =   =       N
+0002700   U   L   L   )  \r  \n                                   r   e
+0002720   t   u   r   n       -   1   ;  \r  \n                   r   e
+0002740   t   u   r   n       1       +       m   a   x   i   m   (   i
+0002760   n   a   l   t   i   m   e   (   n   o   d   e   -   >   l   e
+0003000   f   t   )   ,       i   n   a   l   t   i   m   e   (   n   o
+0003020   d   e   -   >   r   i   g   h   t   )   )   ;  \r  \n   }  \r
+0003040  \n  \r  \n  \r  \n   v   o   i   d       p   r   e   o   r   d
+0003060   e   r   (       N   o   d   e   T       *   p       )  \r  \n
+0003100   /   *  \r  \n   *   /  \r  \n   {  \r  \n                   i
+0003120   f       (       p       !   =       N   U   L   L       )  \r
+0003140  \n                   {  \r  \n                                
+0003160   p   r   i   n   t   f   (       "   %   d       \   n   "   ,
+0003200       p   -   >   i   d       )   ;  \r  \n                    
+0003220               p   r   e   o   r   d   e   r   (       p   -   >
+0003240   l   e   f   t   )   ;  \r  \n                                
+0003260   p   r   e   o   r   d   e   r   (       p   -   >   r   i   g
+0003300   h   t   )   ;  \r  \n                   }  \r  \n   }  \r  \n
+0003320   /   /   c   r   e   a   z   a       u   n       a   r   b   o
+0003340   r   e       b   i   n   a   r       p   r   i   n       c   i
+0003360   t   i   r   e   a       d   e       l   a       t   a   s   t
+0003400   a   t   u   r   a  \r  \n   N   o   d   e   T       *   c   r
+0003420   e   a   t   e   B   i   n   T   r   e   e   (       i   n   t
+0003440       b   r   a   n   c   h   ,       N   o   d   e   T       *
+0003460   p   a   r   e   n   t       )  \r  \n   {  \r  \n            
+0003500       N   o   d   e   T       *   p   ;  \r  \n                
+0003520   i   n   t       i   d   ;  \r  \n  \r  \n                   /
+0003540   *       r   e   a   d       n   o   d   e       i   d       *
+0003560   /  \r  \n                   i   f       (       b   r   a   n
+0003600   c   h       =   =       0       )  \r  \n                    
+0003620               p   r   i   n   t   f   (       "   V   a   l   o
+0003640   a   r   e   a       p   e   n   t   r   u       r   a   d   a
+0003660   c   i   n   a       [   0       p   t       n   u   l   l   ]
+0003700       =   "       )   ;  \r  \n                   e   l   s   e
+0003720       i   f       (       b   r   a   n   c   h       =   =    
+0003740   1       )  \r  \n                                   p   r   i
+0003760   n   t   f   (       "   F   i   u   l       s   t   a   n   g
+0004000       a   l       n   o   d   u   l   u   i       c   u       v
+0004020   a   l   o   a   r   e   a       %   d       [   0       p   t
+0004040       n   u   l   l   ]       =   "   ,  \r  \n                
+0004060                                                   p   a   r   e
+0004100   n   t   -   >   i   d       )   ;  \r  \n                   e
+0004120   l   s   e  \r  \n                                   p   r   i
+0004140   n   t   f   (       "   F   i   u   l       d   r   e   p   t
+0004160       a   l       n   o   d   u   l   u   i       c   u       v
+0004200   a   l   o   a   r   e   a       %   d       [   0       p   t
+0004220       n   u   l   l   ]       =   "   ,  \r  \n                
+0004240                                                   p   a   r   e
+0004260   n   t   -   >   i   d       )   ;  \r  \n                   s
+0004300   c   a   n   f   (   "   %   d   "   ,       &   i   d   )   ;
+0004320  \r  \n                   i   f       (       i   d       =   =
+0004340       0       )  \r  \n                                   r   e
+0004360   t   u   r   n       N   U   L   L   ;  \r  \n                
+0004400   e   l   s   e  \r  \n                   {  \r  \n            
+0004420                       /   *       c   o   n   s   t   r   u   i
+0004440   m       n   o   d   u   l       l   a       c   a   r   e    
+0004460   p   o   i   n   t   e   a   z   a       p       *   /  \r  \n
+0004500                                   p       =       (       N   o
+0004520   d   e   T       *   )   m   a   l   l   o   c   (   s   i   z
+0004540   e   o   f   (       N   o   d   e   T       )   )   ;  \r  \n
+0004560                                   i   f       (       p       =
+0004600   =       N   U   L   L       )   {  \r  \n                    
+0004620                               p   r   i   n   t   f   (       "
+0004640   N   u       m   a   i       a   v   e   m       m   e   m   o
+0004660   r   i   e       i   n       c   r   e   a   t   e   B   i   n
+0004700   T   r   e   e   "       )   ;  \r  \n                        
+0004720                           e   x   i   t   (   1   )   ;  \r  \n
+0004740                                   }  \r  \n                    
+0004760               /   *       f   i   l   l       i   n       n   o
+0005000   d   e       *   /  \r  \n                                   p
+0005020   -   >   i   d       =       i   d   ;  \r  \n                
+0005040                   p   -   >   l   e   f   t       =       c   r
+0005060   e   a   t   e   B   i   n   T   r   e   e   (       1   ,    
+0005100   p       )   ;  \r  \n                                   p   -
+0005120   >   r   i   g   h   t       =       c   r   e   a   t   e   B
+0005140   i   n   T   r   e   e   (       2   ,       p       )   ;  \r
+0005160  \n                   }  \r  \n                   r   e   t   u
+0005200   r   n       p   ;  \r  \n   }  \r  \n   N   o   d   e   T    
+0005220   *   c   r   e   a   t   e   B   i   n   T   r   e   e   F   r
+0005240   o   m   F   i   l   e   (   F   I   L   E   *       f   )  \r
+0005260  \n   {  \r  \n           N   o   d   e   T       *   p   ;  \r
+0005300  \n           i   n   t       c   ;  \r  \n  \r  \n           /
+0005320   *       s   e       c   i   t   e   s   t   e       i   d   -
+0005340   u   l       n   o   d   u   l   u   i       *   /  \r  \n    
+0005360       f   s   c   a   n   f   (   f   ,       "   %   d   "   ,
+0005400       &   c   )   ;  \r  \n           i   f       (       c    
+0005420   =   =       0       )  \r  \n                   r   e   t   u
+0005440   r   n       N   U   L   L   ;       /   *       a   r   b   o
+0005460   r   e       v   i   d   ,       n   u       f   a   c   e   m
+0005500       n   i   m   i   c       *   /  \r  \n           e   l   s
+0005520   e       /   *       e   l   s   e       i   n   c   l   u   s
+0005540       p   e   n   t   r   u       c   l   a   r   i   t   a   t
+0005560   e       *   /  \r  \n           {       /   *       c   o   n
+0005600   s   t   r   u   i   m       n   o   d   u   l       l   a    
+0005620   c   a   r   e       p   o   i   n   t   e   a   z   a       p
+0005640       *   /  \r  \n                   p       =       (       N
+0005660   o   d   e   T       *   )       m   a   l   l   o   c   (    
+0005700   s   i   z   e   o   f   (       N   o   d   e   T       )   )
+0005720   ;  \r  \n                   i   f       (       p       =   =
+0005740       N   U   L   L       )  \r  \n                           f
+0005760   a   t   a   l   E   r   r   o   r   (       "   N   u       m
+0006000   a   i       a   v   e   m       m   e   m   o   r   i   e    
+0006020   i   n       c   r   e   a   t   e   B   i   n   T   r   e   e
+0006040   "       )   ;  \r  \n                   /   *       s   e    
+0006060   p   o   p   u   l   e   a   z   a       n   o   d   u   l    
+0006100   *   /  \r  \n                   p   -   >   i   d       =    
+0006120   c   ;  \r  \n                   p   -   >   l   e   f   t    
+0006140   =       c   r   e   a   t   e   B   i   n   T   r   e   e   F
+0006160   r   o   m   F   i   l   e   (   f   )   ;  \r  \n            
+0006200       p   -   >   r   i   g   h   t       =       c   r   e   a
+0006220   t   e   B   i   n   T   r   e   e   F   r   o   m   F   i   l
+0006240   e   (   f   )   ;  \r  \n           }  \r  \n           r   e
+0006260   t   u   r   n       p   ;  \r  \n   }  \r  \n  \r  \n  \r  \n
+0006300   i   n   t       m   a   i   n   (   )  \r  \n   {  \r  \n    
+0006320               N   o   d   e   T       *   r   o   o   t   ;  \r
+0006340  \n                   F   I   L   E       *   f       =       f
+0006360   o   p   e   n   (   "   A   r   b   o   r   e   B   i   n   a
+0006400   r   .   t   x   t   "   ,       "   r   "   )   ;  \r  \n    
+0006420               i   f       (   !   f   )   {  \r  \n            
+0006440                       p   r   i   n   t   f   (   "   N   u    
+0006460   s   e       p   o   a   t   e       d   e   s   c   h   i   d
+0006500   e       f   i   s   i   e   r   u   l       A   r   b   o   r
+0006520   e   B   i   n   a   r   .   t   x   t   \   n   "   )   ;  \r
+0006540  \n                                   r   e   t   u   r   n    
+0006560   -   1   ;  \r  \n                   }  \r  \n                
+0006600   r   o   o   t       =       c   r   e   a   t   e   B   i   n
+0006620   T   r   e   e   F   r   o   m   F   i   l   e   (   f   )   ;
+0006640  \r  \n                   f   c   l   o   s   e   (   f   )   ;
+0006660  \r  \n  \r  \n  \r  \n                   p   r   i   n   t   f
+0006700   (       "   \   n   P   a   r   c   u   r   g   e   r   e    
+0006720   i   n       p   r   e   o   r   d   i   n   e   \   n   "    
+0006740   )   ;  \r  \n                   p   r   e   o   r   d   e   r
+0006760   (       r   o   o   t       )   ;  \r  \n  \r  \n  \t   /   /
+0007000   T   O   D   O  \r  \n  \t   p   o   s   t   o   r   d   e   r
+0007020   (   r   o   o   t   )   ;  \r  \n  \r  \n  \t   i   n   o   r
+0007040   d   e   r   (   r   o   o   t   )   ;  \r  \n  \r  \n  \t   i
+0007060   n   t       n   r   _   f   r   u   n   z   e       =       l
+0007100   e   a   f   _   n   o   d   e   (   r   o   o   t   )   ;  \r
+0007120  \n  \t   p   r   i   n   t   f   (   "   N   u   m   a   r   u
+0007140   l       d   e       f   r   u   n   z   e       e   s   t   e
+0007160       %   d   \   n   "   ,       n   r   _   f   r   u   n   z
+0007200   e   )   ;   /   /   3  \r  \n  \r  \n                   p   r
+0007220   i   n   t   f   (   "   N   o   d   u   r   i       i   n   t
+0007240   e   r   n   e       =       %   d       \   n   "   ,       n
+0007260   o   d   u   r   i   _   i   n   t   e   r   n   e   (   r   o
+0007300   o   t   )   )   ;   /   /   5  \r  \n  \r  \n                
+0007320   p   r   i   n   t   f   (   "   I   n   a   l   t   i   m   e
+0007340   a       a   r   b   o   r   e   l   u   i       =       %   d
+0007360       \   n   "   ,       i   n   a   l   t   i   m   e   (   r
+0007400   o   o   t   )   )   ;       /   /   3  \r  \n                
+0007420   r   e   t   u   r   n       0   ;  \r  \n   }  \r  \n
+0007436
